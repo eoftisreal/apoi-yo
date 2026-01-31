@@ -52,7 +52,7 @@ The recommended way to build for Windows is using **WSL (Windows Subsystem for L
     ```bash
     sudo apt-get install git wget bzip2 file libwine-dev unzip libtool libtool-bin libltdl-dev pkg-config ant \
         build-essential automake texinfo yasm p7zip-full autopoint \
-        gettext cmake zip wine nsis g++-mingw-w64-i686 curl gperf flex bison \
+        gettext cmake zip wine nsis g++-mingw-w64-x86-64 curl gperf flex bison \
         libcurl4-gnutls-dev python3 python3-setuptools python3-mako python3-requests \
         gcc make procps ca-certificates openjdk-11-jdk-headless nasm jq gnupg \
         meson autoconf
@@ -66,6 +66,17 @@ The recommended way to build for Windows is using **WSL (Windows Subsystem for L
     ../extras/package/win32/build.sh -a x86_64
     ```
     *Note: This script will download and build necessary precompiled dependencies (contribs).*
+
+3.  **Creating the Executable (.exe)**:
+    To generate a standalone `.exe` installer (unsigned release), use the `-i u` flag with the build script:
+    ```bash
+    ../extras/package/win32/build.sh -a x86_64 -i u
+    ```
+    Alternatively, if you have already built the project, you can run the packaging target directly from your build directory:
+    ```bash
+    make package-win32-exe
+    ```
+    The resulting file (e.g., `vlc-4.0.0-dev-win64.exe`) will be located in your build directory.
 
 For detailed instructions, including **MSYS2** setup and debugging, refer to [doc/BUILD-win32.md](doc/BUILD-win32.md).
 
