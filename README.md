@@ -3,13 +3,6 @@
 ## Project Overview
 This repository hosts a custom modification/remake of the VLC media player, based on the **VLC 4.0.0-dev ("Otto Chriek")** branch. It serves as a modern interpretation or customized distribution of the renowned open-source media engine, capable of playing most multimedia files, discs, streams, and devices.
 
-## Repository Verification Status
-During the verification of this repository, the following observations were made regarding the build environment and integrity:
-
-- **Source Integrity**: The codebase is clean of merge conflicts and binary bloat.
-- **Build System**: The project supports both **Autotools** and **Meson** build systems.
-- **Dependencies**: A successful build requires a complete development environment. In standard verifications, the absence of tools like `flex`, `bison`, and `gettext` will cause the bootstrap process to fail.
-
 ## Getting Started
 
 ### Prerequisites
@@ -51,6 +44,30 @@ sudo apt-get install git build-essential pkg-config autoconf automake libtool bi
     ```bash
     ninja -C build
     ```
+
+### Windows Build (Cross-Compilation / WSL)
+The recommended way to build for Windows is using **WSL (Windows Subsystem for Linux)** or a Linux VM, cross-compiling with MinGW-w64.
+
+1.  **Install Dependencies (Ubuntu/WSL)**:
+    ```bash
+    sudo apt-get install git wget bzip2 file libwine-dev unzip libtool libtool-bin libltdl-dev pkg-config ant \
+        build-essential automake texinfo yasm p7zip-full autopoint \
+        gettext cmake zip wine nsis g++-mingw-w64-i686 curl gperf flex bison \
+        libcurl4-gnutls-dev python3 python3-setuptools python3-mako python3-requests \
+        gcc make procps ca-certificates openjdk-11-jdk-headless nasm jq gnupg \
+        meson autoconf
+    ```
+
+2.  **Build using the Helper Script**:
+    VLC provides a dedicated script to handle contribs and configuration for Windows.
+    ```bash
+    mkdir build
+    cd build
+    ../extras/package/win32/build.sh -a x86_64
+    ```
+    *Note: This script will download and build necessary precompiled dependencies (contribs).*
+
+For detailed instructions, including **MSYS2** setup and debugging, refer to [doc/BUILD-win32.md](doc/BUILD-win32.md).
 
 ## Project Structure
 - `src/`: Core libvlccore source code.
