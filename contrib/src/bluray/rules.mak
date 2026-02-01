@@ -49,6 +49,7 @@ $(TARBALLS)/libbluray-$(BLURAY_VERSION).tar.xz:
 bluray: libbluray-$(BLURAY_VERSION).tar.xz .sum-bluray
 	$(UNPACK)
 	$(APPLY) $(SRC)/bluray/0001-Link-with-gdi32-when-using-freetype-in-Windows.patch
+	$(APPLY) $(SRC)/bluray/0002-Fix-java-version-detection-for-JDK-11.patch
 	$(MOVE)
 
 .bluray: bluray crossfile.meson

@@ -1,0 +1,24 @@
+From: Jules <jules@example.com>
+Date: Sun, 01 Feb 2026 19:30:00 +0000
+Subject: [PATCH] bdj: build with source/target 1.8 for JDK >= 11
+
+JDK 11 (and specifically some distributions like Debian/Kali) may drop
+support for source/target 1.6, requiring 1.8 or later.
+
+---
+ src/libbluray/bdj/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/libbluray/bdj/meson.build b/src/libbluray/bdj/meson.build
+index 1234567..89abcdef 100644
+--- a/src/libbluray/bdj/meson.build
++++ b/src/libbluray/bdj/meson.build
+@@ -9,7 +9,7 @@ if ant.found() and add_languages('java', native: false, required: get_option('bd
+     javac_version = meson.get_compiler('java').version()
+     if get_option('java9') and bdj_type == 'j2se'
+-        if javac_version.version_compare('>= 18.0')
++        if javac_version.version_compare('>= 11.0')
+             java_src_version = '1.8'
+         elif javac_version.version_compare('>=12.0')
+--
+2.39.2
