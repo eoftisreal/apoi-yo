@@ -23,6 +23,9 @@ $(TARBALLS)/nettle-$(NETTLE_VERSION).tar.gz:
 nettle: nettle-$(NETTLE_VERSION).tar.gz .sum-nettle
 	$(UNPACK)
 	$(call update_autoconfig,.)
+	# remove conflicting declarations
+	sed -i.orig -e 's/^extern int getopt ();/#include <unistd.h>/' $(UNPACK_DIR)/getopt.h
+	sed -i.orig -e 's/^extern char \*getenv ();/#include <stdlib.h>/' $(UNPACK_DIR)/getopt.c
 	$(MOVE)
 
 DEPS_nettle = gmp $(DEPS_gmp)
