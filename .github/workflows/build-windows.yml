@@ -1,0 +1,49 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360 # 6 hours
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          git wget bzip2 file libwine-dev unzip libtool libtool-bin libltdl-dev pkg-config ant \
+          build-essential automake texinfo yasm p7zip-full autopoint gettext cmake zip wine nsis \
+          g++-mingw-w64-x86-64 curl gperf flex bison libcurl4-gnutls-dev python3 python3-setuptools \
+          python3-mako python3-requests gcc make procps ca-certificates openjdk-11-jdk-headless \
+          nasm jq gnupg meson autoconf
+
+    - name: Prepare Build Directory
+      run: mkdir build
+
+    - name: Build Windows Executable
+      working-directory: build
+      run: |
+        bash ../extras/package/win32/build.sh -a x86_64 -i u
+
+    - name: Find Executable
+      id: find-exe
+      run: |
+        EXE_PATH=$(find build -name "*.exe" | head -n 1)
+        echo "Found exe at: $EXE_PATH"
+        echo "exe_path=$EXE_PATH" >> $GITHUB_OUTPUT
+
+    - name: Upload Artifact
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: vlc-windows-build
+        path: build/**/*.exe
