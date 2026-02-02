@@ -65,6 +65,11 @@ _add_environ_val('CMAKE_FIND_ROOT_PATH_MODE_LIBRARY', 'PATH_MODE_LIBRARY')
 _add_environ_val('CMAKE_FIND_ROOT_PATH_MODE_INCLUDE', 'PATH_MODE_INCLUDE')
 _add_environ_val('CMAKE_FIND_ROOT_PATH_MODE_PACKAGE', 'PATH_MODE_PACKAGE')
 
+if os.environ.get('SYSTEM_NAME') == 'Windows':
+    args.file.write("set(CMAKE_THREAD_LIBS_INIT \"-lpthread\")\n")
+    args.file.write("set(CMAKE_HAVE_LIBC_PTHREAD 1)\n")
+    args.file.write("set(HAVE_PTHREAD_H 1)\n")
+
 # final includes
 env_value = os.environ.get('EXTRA_INCLUDE')
 if env_value != None and env_value != '':
