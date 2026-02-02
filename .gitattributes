@@ -1,0 +1,5 @@
+# Enforce LF line endings for text files that require it
+*.patch text eol=lf
+*.in text eol=lf
+*.ac text eol=lf
+configure text eol=lf
