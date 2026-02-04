@@ -590,6 +590,9 @@ if [ -n "$BUILD_MESON" ]; then
     meson compile -j $JOBS
 else
     info "Bootstrapping"
+    if [ ! -x "${VLC_ROOT_PATH}/bootstrap" ]; then
+        chmod +x "${VLC_ROOT_PATH}/bootstrap"
+    fi
     ${VLC_ROOT_PATH}/bootstrap
 
     mkdir -p $SHORTARCH
@@ -622,6 +625,12 @@ else
     fi
 
     info "Configuring VLC"
+    if [ ! -x "${VLC_ROOT_PATH}/make-alias" ]; then
+        chmod +x "${VLC_ROOT_PATH}/make-alias"
+    fi
+    if [ ! -x "${SCRIPT_PATH}/configure.sh" ]; then
+        chmod +x "${SCRIPT_PATH}/configure.sh"
+    fi
     ${SCRIPT_PATH}/configure.sh --host=$TRIPLET --with-contrib=../contrib/$CONTRIB_PREFIX "$WIXPATH" $CONFIGFLAGS
 
     info "Compiling"
