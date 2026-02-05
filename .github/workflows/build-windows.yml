@@ -20,14 +20,14 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
-        sudo apt-get install -y wine wine32:i386 wget
+        sudo apt-get install -y wine wine32:i386 wget xvfb
 
         # Download and install Wine Mono
         MONO_VER="9.1.0"
         wget "https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}-x86.msi"
 
-        # Initialize Wine prefix and install Mono (headless)
-        wine msiexec /i "wine-mono-${MONO_VER}-x86.msi" /qn /norestart
+        # Initialize Wine prefix and install Mono (with Xvfb)
+        xvfb-run -a wine msiexec /i "wine-mono-${MONO_VER}-x86.msi" /qn /norestart
 
     - name: Install Dependencies
       run: |
@@ -41,11 +41,18 @@ jobs:
     - name: Prepare Build Directory
       run: mkdir build
 
+    - name: Create Locale Directory Workaround
+      run: |
+        # Pre-create the locale directory to avoid cp errors during packaging
+        # The path corresponds to where the build system expects to find locales
+        mkdir -p build/win64/_win32/share/locale
+
     - name: Build Windows Executable
       working-directory: build
       run: |
         chmod +x ../bootstrap
-        bash ../extras/package/win32/build.sh -a x86_64 -i u
+        # Run build under xvfb-run to ensure Wine commands have a display
+        xvfb-run -a bash ../extras/package/win32/build.sh -a x86_64 -i u
 
     - name: Find Executable
       id: find-exe
