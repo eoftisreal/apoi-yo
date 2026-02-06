@@ -13,18 +13,6 @@ The **engine of apoi** can be embedded into 3rd party applications, and is calle
 **apoi** is part of the [VideoLAN project](https://videolan.org) and
 is developed and supported by a community of volunteers.
 
-The VideoLAN project was started at the university [École Centrale Paris](https://www.centralesupelec.fr/) who
-relicensed apoi under the GPLv2 license in February 2001. Since then, apoi has
-been downloaded **billions** of times.
-
-## License
-
-**apoi** is released under the GPLv2 *(or later)* license.
-*On some platforms, it is de facto GPLv3, because of the licenses of dependencies*.
-
-**libapoi**, the engine is released under the LGPLv2 *(or later)* license. \
-This allows embedding the engine in 3rd party applications, while letting them to be licensed under other licenses.
-
 # Platforms
 
 apoi is available for the following platforms:
