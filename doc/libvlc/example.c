@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <unistd.h>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 int main(int argc, char* argv[])
 {

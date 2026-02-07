@@ -33,7 +33,7 @@
 
 #include "../../../src/clock/clock.h"
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 #include "../../libvlc/test.h"
 #include "../../../lib/libvlc_internal.h"
 

@@ -28,7 +28,7 @@
 #include <pthread.h>
 #include <errno.h>
 #include <time.h>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 /* position at which the snapshot is taken */
 #define VLC_THUMBNAIL_POSITION (30./100.)

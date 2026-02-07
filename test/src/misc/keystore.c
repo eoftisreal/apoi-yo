@@ -21,7 +21,7 @@
 #ifdef HAVE_CONFIG_H
 # include "config.h"
 #endif
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #include "../../libvlc/test.h"
 #include "../../../lib/libvlc_internal.h"

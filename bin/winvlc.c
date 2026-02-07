@@ -32,7 +32,7 @@
 #define UNICODE
 #endif
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 #include <windows.h>
 #include <shellapi.h>
 

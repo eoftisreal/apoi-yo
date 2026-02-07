@@ -10,7 +10,7 @@
 #include <locale.h>
 #include <errno.h>
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #ifdef HAVE_CONFIG_H
 # include <config.h>

@@ -33,7 +33,7 @@
 #include "../../../lib/libvlc_internal.h"
 #include "../../libvlc/test.h"
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 static libvlc_instance_t *vlc;
 static vlc_object_t *parent;

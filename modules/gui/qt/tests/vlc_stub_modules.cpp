@@ -23,7 +23,7 @@
 #define MODULE_NAME module_faker
 #undef VLC_DYNAMIC_PLUGIN
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #include <vlc_common.h>
 #include <vlc_plugin.h>

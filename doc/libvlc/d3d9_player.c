@@ -5,7 +5,7 @@
 #define COBJMACROS
 #include <d3d9.h>
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #define SCREEN_WIDTH   900
 #define SCREEN_HEIGHT  900

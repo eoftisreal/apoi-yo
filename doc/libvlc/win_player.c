@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <assert.h>
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #define SCREEN_WIDTH  1500
 #define SCREEN_HEIGHT  900

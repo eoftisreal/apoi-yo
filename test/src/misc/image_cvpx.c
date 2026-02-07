@@ -31,7 +31,7 @@
 #include "../../libvlc/test.h"
 #include "../../../modules/codec/vt_utils.h"
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #include <vlc_common.h>
 #include <vlc_image.h>

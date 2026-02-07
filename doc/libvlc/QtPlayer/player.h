@@ -13,7 +13,7 @@
 #include <QPushButton>
 #include <QSlider>
 #include <QWidget>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 class Mwindow : public QMainWindow {
 

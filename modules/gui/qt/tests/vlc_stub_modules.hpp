@@ -23,7 +23,7 @@
 # include <config.h>
 #endif
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #include <vlc_common.h>
 #include <vlc_plugin.h>

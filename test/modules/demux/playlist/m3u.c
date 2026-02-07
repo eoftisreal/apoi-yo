@@ -21,7 +21,7 @@
 # include "config.h"
 #endif
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 #include "../../../../lib/libvlc_internal.h"
 #include "../../../libvlc/test.h"
 

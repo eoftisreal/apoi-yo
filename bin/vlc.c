@@ -28,7 +28,7 @@
 # include "config.h"
 #endif
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

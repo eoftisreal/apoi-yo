@@ -18,7 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
  *****************************************************************************/
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #if 0
 #define debug(...) printf(__VA_ARGS__)

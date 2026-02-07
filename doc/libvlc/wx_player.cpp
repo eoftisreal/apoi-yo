@@ -5,7 +5,7 @@
 
 #include <wx/wx.h>
 #include <wx/filename.h>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 #include <climits>
 
 #ifdef __WXGTK__

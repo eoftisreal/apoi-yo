@@ -42,7 +42,7 @@
 #include <vlc_tls.h>
 #include "../../../lib/libvlc_internal.h"
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 static vlc_tls_server_t *server_creds;
 static vlc_tls_client_t *client_creds;

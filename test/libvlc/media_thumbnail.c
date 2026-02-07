@@ -35,7 +35,7 @@
 #include <vlc_threads.h>
 #include <vlc_modules.h>
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #ifndef TEST_THUMB_TYPE
 # error Define TEST_THUMB_TYPE to a libvlc_picture_type_t value

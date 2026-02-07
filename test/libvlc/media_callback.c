@@ -35,7 +35,7 @@
 #include <vlc_threads.h>
 #include <vlc_interrupt.h>
 
-#include <vlc/libvlc_media.h>
+#include <apoi/libapoi_media.h>
 
 #include <limits.h>
 

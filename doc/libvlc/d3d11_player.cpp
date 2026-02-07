@@ -24,7 +24,7 @@
 # include <dxgidebug.h>
 #endif
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #define INITIAL_WIDTH  1500
 #define INITIAL_HEIGHT  900

@@ -44,7 +44,7 @@
 #include <vlc_url.h>
 #include "../lib/libvlc_internal.h"
 
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #include "demux-run.h"
 #include "decoder.h"

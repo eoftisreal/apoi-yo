@@ -29,7 +29,7 @@
 #include <vlc_common.h>
 #include <vlc_media_source.h>
 #include <vlc_vector.h>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 static const char *libvlc_argv[] = {
     "-v",

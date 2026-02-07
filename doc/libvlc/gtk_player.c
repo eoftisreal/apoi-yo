@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
-#include <vlc/vlc.h>
+#include <apoi/apoi.h>
 
 #define BORDER_WIDTH 6
 
