@@ -3,10 +3,10 @@
     <assemblyIdentity
         version="1.0.0.0"
         processorArchitecture="*"
-        name="VideoLAN.VLC"
+        name="Apoi.Player"
         type="win32"
     />
-    <description>see https://www.videolan.org/</description>
+    <description>Apoi media player</description>
     <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
         <security>
             <requestedPrivileges>

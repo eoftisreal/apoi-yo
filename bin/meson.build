@@ -1,4 +1,4 @@
-# Do we build the main VLC binary?
+# Do we build the main Apoi binary?
 build_vlc = get_option('vlc')
 
 if build_vlc and (host_system != 'darwin' or have_osx) and not have_win_store and host_system != 'android'

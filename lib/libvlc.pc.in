@@ -4,7 +4,7 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: LibVLC control API
-Description: VLC media player external control library
+Description: Apoi media player external control library
 Version: @VERSION@
 Cflags: -I${includedir}
 Libs: -L${libdir} -lvlc

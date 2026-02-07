@@ -1,4 +1,4 @@
-# Building vlc
+# Building apoi
 #
 if BUILD_VLC
 if HAVE_OSX
@@ -24,7 +24,7 @@ AM_CFLAGS += -sMAIN_MODULE=1
 endif
 
 #
-# Main VLC executable
+# Main Apoi executable
 #
 vlc_LDADD = ../lib/libvlc.la ../src/libvlccore.la
 vlc_CPPFLAGS = $(AM_CPPFLAGS)
@@ -76,7 +76,7 @@ endif
 
 
 #
-# Static (debug) VLC executable
+# Static (debug) Apoi executable
 #
 vlc_static_SOURCES = $(vlc_SOURCES)
 vlc_static_CFLAGS = $(AM_CFLAGS) \

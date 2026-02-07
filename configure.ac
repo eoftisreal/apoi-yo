@@ -1,6 +1,6 @@
-dnl Autoconf settings for vlc
+dnl Autoconf settings for apoi
 
-AC_COPYRIGHT([Copyright 1999-2026 VLC authors and VideoLAN])
+AC_COPYRIGHT([Copyright 1999-2026 Apoi authors])
 
 AC_INIT([apoi], [4.0.0-dev])
 VERSION_MAJOR=4

@@ -129,11 +129,11 @@ static void ShowDialog   ( intf_thread_t *, int, int, intf_dialog_args_t * );
 
 #define SYSTRAY_TEXT N_( "Systray icon" )
 #define SYSTRAY_LONGTEXT N_( "Show an icon in the systray " \
-                             "allowing you to control APOI media player " \
+                             "allowing you to control Apoi media player " \
                              "for basic actions." )
 
-#define MINIMIZED_TEXT N_( "Start VLC with only a systray icon" )
-#define MINIMIZED_LONGTEXT N_( "VLC will start with just an icon in " \
+#define MINIMIZED_TEXT N_( "Start Apoi with only a systray icon" )
+#define MINIMIZED_LONGTEXT N_( "Apoi will start with just an icon in " \
                                "your taskbar." )
 
 #define KEEPSIZE_TEXT N_( "Resize interface to the native video size" )
@@ -149,7 +149,7 @@ static void ShowDialog   ( intf_thread_t *, int, int, intf_dialog_args_t * );
 #define NOTIFICATION_TEXT N_( "Show notification popup on track change" )
 #define NOTIFICATION_LONGTEXT N_( \
     "Show a notification popup with the artist and track name when " \
-    "the current playlist item changes, when VLC is minimized or hidden." )
+    "the current playlist item changes, when Apoi is minimized or hidden." )
 
 #define OPACITY_TEXT N_( "Windows opacity between 0.1 and 1" )
 #define OPACITY_LONGTEXT N_( "Sets the windows opacity between 0.1 and 1 " \
@@ -186,7 +186,7 @@ static void ShowDialog   ( intf_thread_t *, int, int, intf_dialog_args_t * );
         "the recent items played in the player." )
 
 #define QT_MODE_TEXT N_( "Selection of the starting mode and look" )
-#define QT_MODE_LONGTEXT N_( "Start VLC with:\n" \
+#define QT_MODE_LONGTEXT N_( "Start Apoi with:\n" \
                              " - normal mode\n"  \
                              " - a zone always present to show information " \
                                   "as lyrics, album arts...\n" \
@@ -216,8 +216,8 @@ static void ShowDialog   ( intf_thread_t *, int, int, intf_dialog_args_t * );
 #define QT_DISABLE_VOLUME_KEYS_LONGTEXT N_(                                             \
     "With this option checked, the volume up, volume down and mute buttons on your "    \
     "keyboard will always change your system volume. With this option unchecked, the "  \
-    "volume buttons will change VLC's volume when VLC is selected and change the "      \
-    "system volume when VLC is not selected." )
+    "volume buttons will change Apoi's volume when Apoi is selected and change the "      \
+    "system volume when Apoi is not selected." )
 
 #define QT_PAUSE_MINIMIZED_TEXT N_( "Pause the video playback when minimized" )
 #define QT_PAUSE_MINIMIZED_LONGTEXT N_( \
@@ -1017,7 +1017,7 @@ static void *Thread( void *obj )
     }
 #endif
 
-    app.setApplicationDisplayName( qtr("APOI media player") );
+    app.setApplicationDisplayName( qtr("Apoi media player") );
 
     if( QDate::currentDate().dayOfYear() >= QT_XMAS_JOKE_DAY && var_InheritBool( p_intf, "qt-icon-change" ) )
         app.setWindowIcon( QIcon::fromTheme( "vlc-xmas", QIcon( ":/logo/vlc128-xmas.png" ) ) );

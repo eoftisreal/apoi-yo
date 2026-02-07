@@ -9,8 +9,8 @@ pkgdatadir=${datadir}/@PACKAGE@
 pkglibdir=${libdir}/@PACKAGE@
 pluginsdir=${pkglibdir}/plugins
 
-Name: VLC plugin API
-Description: VLC media player plugin interface
+Name: Apoi plugin API
+Description: Apoi media player plugin interface
 Version: @VERSION@
 Cflags: -I${includedir} -I${pkgincludedir}/plugins \
 	-DVLC_DYNAMIC_PLUGIN \
