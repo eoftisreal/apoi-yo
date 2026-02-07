@@ -23,7 +23,7 @@
 #endif
 
 #include <vlc_common.h>
-#include "../libvlc.h"
+#include "../libapoi.h"
 #include "../lib/libvlc_internal.h"
 
 #ifdef HAVE_DBUS

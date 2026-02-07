@@ -48,7 +48,7 @@
 #include <vlc_sout.h>
 #include <vlc_url.h>
 #include "../misc/threads.h"
-#include "../libvlc.h"
+#include "../libapoi.h"
 
 /*****************************************************************************
  * Local prototypes.

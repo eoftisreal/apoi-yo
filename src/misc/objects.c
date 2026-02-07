@@ -40,7 +40,7 @@
 #include <vlc_common.h>
 #include <vlc_threads.h>
 
-#include "../libvlc.h"
+#include "../libapoi.h"
 #include <vlc_aout.h>
 #include "audio_output/aout_internal.h"
 

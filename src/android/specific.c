@@ -28,7 +28,7 @@
 #include <vlc_common.h>
 #include <vlc_network.h>
 #include <vlc_fs.h>
-#include "../libvlc.h"
+#include "../libapoi.h"
 #include "../config/configuration.h"
 
 #include <string.h>

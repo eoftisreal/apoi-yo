@@ -32,7 +32,7 @@
 #include <vlc_interrupt.h>
 #include <vlc_extensions.h>
 #include <assert.h>
-#include "../libvlc.h"
+#include "../libapoi.h"
 
 struct vlc_dialog_provider
 {

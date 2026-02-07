@@ -42,7 +42,7 @@
 #include <vlc_charset.h>
 #include <vlc_modules.h>
 #include "rcu.h"
-#include "../libvlc.h"
+#include "../libapoi.h"
 
 #ifdef _WIN32
 static const char msg_type[4][9] = { "", " error", " warning", " debug" };
