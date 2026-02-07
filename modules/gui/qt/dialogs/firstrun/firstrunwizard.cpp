@@ -48,7 +48,7 @@ FirstRunWizard::FirstRunWizard( qt_intf_t *_p_intf, QWidget *parent)
     ui.setupUi( this );
 
     /* Set the privacy and network policy */
-    ui.policy->setHtml( qtr( "<p>In order to protect your privacy, <i>APOI media player</i> "
+    ui.policy->setHtml( qtr( "<p>In order to protect your privacy, <i>Apoi media player</i> "
         "does <b>not</b> collect personal data or transmit them, "
         "not even in anonymized form, to anyone."
         "</p>\n"
@@ -202,13 +202,13 @@ void FirstRunWizard::updateColorLabel( QAbstractButton* btn )
     switch ( colorSchemeGroup->id(btn) )
     {
         case ColorSchemeModel::System:
-            ui.explainerLabel->setText( qtr( "<i>VLC will automatically switch to dark mode accordingly with system settings</i>" ) );
+            ui.explainerLabel->setText( qtr( "<i>Apoi will automatically switch to dark mode accordingly with system settings</i>" ) );
             break;
         case ColorSchemeModel::Day:
-            ui.explainerLabel->setText( qtr( "<i>VLC will automatically use light mode</i>" ) );
+            ui.explainerLabel->setText( qtr( "<i>Apoi will automatically use light mode</i>" ) );
             break;
         case ColorSchemeModel::Night:
-            ui.explainerLabel->setText( qtr( "<i>VLC will automatically use dark mode</i>" ) );
+            ui.explainerLabel->setText( qtr( "<i>Apoi will automatically use dark mode</i>" ) );
             break;
     }
 }
@@ -222,10 +222,10 @@ void FirstRunWizard::updateLayoutLabel( QAbstractButton* btn )
     switch ( ui.layoutGroup->id( btn ) )
     {
         case MODERN:
-            ui.layoutExplainer->setText( qtr( "<i>VLC will use a modern layout with no menubar or pinned controls but with client-side decoration</i>" ) );
+            ui.layoutExplainer->setText( qtr( "<i>Apoi will use a modern layout with no menubar or pinned controls but with client-side decoration</i>" ) );
             break;
         case CLASSIC:
-            ui.layoutExplainer->setText( qtr( "<i>VLC will use a classic layout with a menubar and pinned controls but with no client-side decoration</i>" ) );
+            ui.layoutExplainer->setText( qtr( "<i>Apoi will use a classic layout with a menubar and pinned controls but with no client-side decoration</i>" ) );
             break;
     }
 }

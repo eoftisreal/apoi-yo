@@ -1,4 +1,4 @@
-project('VLC', ['c', 'cpp'],
+project('Apoi', ['c', 'cpp'],
     version: '4.0.0-dev',
     default_options: ['c_std=gnu17', 'cpp_std=c++17'],
     meson_version: '>=1.10.0')
@@ -33,7 +33,7 @@ vlc_version_extra    = vlc_version_parts.get(3, '0').to_int()
 # Short version (major.minor.revision)
 vlc_version_short = f'@vlc_version_major@.@vlc_version_minor@.@vlc_version_revision@'
 
-# Normal VLC version (major.minor.revision[-dev])
+# Normal Apoi version (major.minor.revision[-dev])
 vlc_version = vlc_version_short + ((vlc_version_type != '') ? f'-@vlc_version_type@' : '')
 
 vlc_package_name = meson.project_name().to_lower()

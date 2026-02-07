@@ -3,7 +3,7 @@
 
 #include <winuser.h>
 
-VLC_ICON ICON "vlc.ico"
+APOI_ICON ICON "vlc.ico"
 
 1 VERSIONINFO
 FILETYPE 1
@@ -15,15 +15,15 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName", "VideoLAN"
-      VALUE "ProductName", "APOI media player"
+      VALUE "CompanyName", "Apoi"
+      VALUE "ProductName", "Apoi media player"
       VALUE "ProductVersion", VERSION_NUMBER_STR
       VALUE "InternalName", "apoi"
       VALUE "OriginalFilename", "apoi.exe"
       VALUE "FileVersion", "@VERSION@"
-      VALUE "FileDescription", "APOI media player"
-      VALUE "LegalCopyright", "Copyright \251 @COPYRIGHT_YEARS@ VideoLAN and VLC Authors"
-      VALUE "LegalTrademarks", "VLC media player, VideoLAN and x264 are registered trademarks from VideoLAN"
+      VALUE "FileDescription", "Apoi media player"
+      VALUE "LegalCopyright", "Copyright \251 @COPYRIGHT_YEARS@ Apoi Authors"
+      VALUE "LegalTrademarks", "Apoi media player"
     END
   END
   BLOCK "VarFileInfo"

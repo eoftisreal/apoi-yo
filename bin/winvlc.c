@@ -1,5 +1,5 @@
 /*****************************************************************************
- * winvlc.c: the Windows VLC media player
+ * winvlc.c: the Windows Apoi media player
  *****************************************************************************
  * Copyright (C) 1998-2011 the VideoLAN team
  *
