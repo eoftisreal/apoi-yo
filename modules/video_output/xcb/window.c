@@ -959,7 +959,7 @@ static int OpenCommon(vlc_window_t *wnd, char *display, xcb_connection_t *conn,
         set_string(conn, window, utf8, net_wm_name, _("Apoi media player"));
 
     xcb_atom_t net_wm_icon_name = get_atom(conn, net_wm_icon_name_ck);
-    set_string(conn, window, utf8, net_wm_icon_name, _("VLC"));
+    set_string(conn, window, utf8, net_wm_icon_name, _("Apoi"));
 
     xcb_atom_t wm_window_role = get_atom(conn, wm_window_role_ck);
     set_ascii_prop(conn, window, wm_window_role, "vlc-video");

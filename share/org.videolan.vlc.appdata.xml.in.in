@@ -16,7 +16,7 @@
     </description>
     <url type="homepage">https://github.com/eoftisreal/apoi-yo</url>
     <url type="bugtracker">https://github.com/eoftisreal/apoi-yo/issues</url>
-    <url type="donation">https://www.videolan.org/contribute.html</url>
+    <url type="donation">https://github.com/eoftisreal/apoi-yo</url>
     <releases>
         <release version="@VERSION@" />
     </releases>
